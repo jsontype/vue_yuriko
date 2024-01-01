@@ -1,3 +1,14 @@
-git status : 今のブランチ確認
-git checkout master : マスターブランチに移動する
-git checkout -b feat/change_text : 現在のブランチから新しいブランチを作成する
+# 今のブランチ確認
+git status
+
+# マスターブランチに移動する
+git checkout master
+git fetch origin
+git pull origin master
+
+# 現在のブランチから新しいブランチを作成する
+git checkout -b feat/change_text
+作業を行う
+git add .
+git commit -m "feat: change text"
+git push origin feat/change_text
