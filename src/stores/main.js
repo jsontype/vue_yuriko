@@ -28,16 +28,43 @@ export const useMainStore = defineStore('main', () => {
     }
   }
 
+  // function fetchSampleClients() {
+  //   axios
+  //     .get(`data-sources/clients.json?v=3`)
+  //     .then((result) => {
+  //       clients.value = result?.data?.data
+  //     })
+  //     .catch((error) => {
+  //       alert(error.message)
+  //     })
+  // }
+
   function fetchSampleClients() {
     axios
-      .get(`data-sources/clients.json?v=3`)
-      .then((result) => {
-        clients.value = result?.data?.data
+      .get(`https://yts.mx/api/v2/list_movies.json?sort_by=rating`)
+      .then((res) => {
+        clients.value = res.data.data.movies
+        console.log(clients.value)
       })
-      .catch((error) => {
-        alert(error.message)
+      .catch((e) => {
+        console.error(e)
       })
   }
+
+  // const movies = ref([])
+
+  // function getMovies() {
+  //   fetch('https://yts.mx/api/v2/list_movies.json?sort_by=rating')
+  //     .then(res => res.json())
+  //     .then(json => {
+  //       movies.value = json.data.movies
+  //       console.log(movies.value)
+  //     })
+  // }
+
+  // onMounted(() => {
+  //   getMovies()
+  // })
 
   function fetchSampleHistory() {
     axios
