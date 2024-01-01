@@ -103,37 +103,37 @@ const formStatusSubmit = () => {
       </CardBox>
     </SectionMain>
 
-    <SectionTitle>カスタマイズ</SectionTitle>
+    <SectionTitle>ユーザー権限</SectionTitle>
 
     <SectionMain>
       <CardBox>
-        <FormField label="Checkbox">
+        <FormField label="チェックボックス">
           <FormCheckRadioGroup
             v-model="customElementsForm.checkbox"
             name="sample-checkbox"
-            :options="{ lorem: 'Lorem', ipsum: 'Ipsum', dolore: 'Dolore' }"
+            :options="{ lorem: '映画', ipsum: 'ToDo', dolore: 'ニュース' }"
           />
         </FormField>
 
         <BaseDivider />
 
-        <FormField label="Radio">
+        <FormField label="性別">
           <FormCheckRadioGroup
             v-model="customElementsForm.radio"
             name="sample-radio"
             type="radio"
-            :options="{ one: 'One', two: 'Two' }"
+            :options="{ one: '男性', two: '女性' }"
           />
         </FormField>
 
         <BaseDivider />
 
-        <FormField label="Switch">
+        <FormField label="有料会員">
           <FormCheckRadioGroup
             v-model="customElementsForm.switch"
             name="sample-switch"
             type="switch"
-            :options="{ one: 'One', two: 'Two' }"
+            :options="{ one: '有料' }"
           />
         </FormField>
 
