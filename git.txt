@@ -6,9 +6,10 @@ git checkout master
 git fetch origin
 git pull origin master
 
-# 現在のブランチから新しいブランチを作成する
+# 新しい作業する時の流れ
 git checkout -b feat/change_text
-作業を行う
+作業を行う。
 git add .
 git commit -m "feat: change text"
 git push origin feat/change_text
+PRをする。
