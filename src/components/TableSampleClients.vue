@@ -103,7 +103,7 @@ const remove = (arr, cb) => {
           {{ client.genres.join(', ') }}
         </td>
         <td data-label="City">
-          {{ client.runtime }} m
+          {{ client.runtime }} min.
         </td>
         <td data-label="Progress" class="lg:w-32">
           <progress class="flex w-2/5 self-center lg:w-full" max="10" :value="client.rating">
