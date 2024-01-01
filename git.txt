@@ -1,0 +1,3 @@
+git status : 今のブランチ確認
+git checkout master : マスターブランチに移動する
+git checkout -b feat/change_text : 現在のブランチから新しいブランチを作成する
