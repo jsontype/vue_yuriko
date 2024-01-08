@@ -1,18 +1,16 @@
 # 今のブランチ確認
 git status
 
-# マスターブランチに移動する
+# ヤンさんが追加した分を同期したいときは？
 git checkout master
 git fetch origin
 git pull origin master
 
-# 新しい作業する時の流れ
-git checkout -b feat/change_text
+# 保存の流れは？
 作業を行う。
 git add .
-git commit -m "feat: change text"
-git push origin feat/change_text
-PRをする。
+git commit -m "作業内容"
+git push origin master
 
 # 実行方法
 npm run dev
