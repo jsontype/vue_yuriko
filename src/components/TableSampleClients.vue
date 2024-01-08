@@ -1,13 +1,10 @@
 <script setup>
-import { computed, ref, onMounted } from 'vue'
+import { computed, ref } from 'vue'
 import { useMainStore } from '@/stores/main'
-import { mdiEye, mdiTrashCan } from '@mdi/js'
 import CardBoxModal from '@/components/CardBoxModal.vue'
-import TableCheckboxCell from '@/components/TableCheckboxCell.vue'
 import BaseLevel from '@/components/BaseLevel.vue'
 import BaseButtons from '@/components/BaseButtons.vue'
 import BaseButton from '@/components/BaseButton.vue'
-import UserAvatar from '@/components/UserAvatar.vue'
 
 defineProps({
   checkable: Boolean
@@ -24,8 +21,6 @@ const isModalDangerActive = ref(false)
 const perPage = ref(5)
 
 const currentPage = ref(0)
-
-const checkedRows = ref([])
 
 const itemsPaginated = computed(() =>
   items.value.slice(perPage.value * currentPage.value, perPage.value * (currentPage.value + 1))
@@ -96,8 +91,10 @@ const remove = (arr, cb) => {
         <!-- <td class="border-b-0 lg:w-6 before:hidden">
           <UserAvatar :username="client.name" class="w-24 h-24 mx-auto lg:w-6 lg:h-6" />
         </td> -->
-        <td data-label="Name">
-          {{ client.title }}
+        <td class="hover:bg-sky-500 hover:text-white" data-label="Name">
+          <a :href="client.url">
+            {{ client.title }} ({{ client.year }})
+          </a>
         </td>
         <td data-label="Company">
           {{ client.genres.join(', ') }}

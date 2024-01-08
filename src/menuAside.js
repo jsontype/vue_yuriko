@@ -1,16 +1,12 @@
 import {
   mdiAccountCircle,
   mdiMonitor,
-  mdiGithub,
   mdiLock,
   mdiAlertCircle,
   mdiSquareEditOutline,
   mdiTable,
-  mdiViewList,
   mdiTelevisionGuide,
-  mdiResponsive,
-  mdiPalette,
-  mdiReact
+  mdiPalette
 } from '@mdi/js'
 
 export default [

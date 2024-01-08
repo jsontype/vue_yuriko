@@ -41,10 +41,10 @@ export const useMainStore = defineStore('main', () => {
 
   function fetchSampleClients() {
     axios
-      .get(`https://yts.mx/api/v2/list_movies.json?sort_by=rating`)
+      .get(`https://yts.mx/api/v2/list_movies.json?sort_by=rating&limit=50`)
       .then((res) => {
         clients.value = res.data.data.movies
-        console.log(clients.value)
+        console.log('movie api: ', clients.value)
       })
       .catch((e) => {
         console.error(e)
